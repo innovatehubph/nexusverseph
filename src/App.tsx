@@ -19,11 +19,11 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<Proposal />} />
+            <Route path="/platform" element={<Index />} />
             <Route path="/trading" element={<Trading />} />
             <Route path="/financial" element={<Financial />} />
             <Route path="/gaming" element={<Gaming />} />
-            <Route path="/proposal" element={<Proposal />} />
           </Routes>
         </BrowserRouter>
       </div>

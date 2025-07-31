@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Globe, Zap, Shield, Gamepad2, Coins, Users, Rocket, Star } from "lucide-react";
 
@@ -247,9 +248,22 @@ const Proposal = () => {
               <p className="text-xl text-muted-foreground mb-6">
                 "The Verse is Coming. Are You Ready?"
               </p>
-              <div className="flex items-center justify-center gap-2 text-lg">
-                <Users className="w-6 h-6 text-primary" />
-                <span className="font-semibold">Let's discuss this vision together</span>
+              <div className="flex flex-col items-center gap-4">
+                <div className="flex items-center justify-center gap-2 text-lg mb-4">
+                  <Users className="w-6 h-6 text-primary" />
+                  <span className="font-semibold">Let's discuss this vision together</span>
+                </div>
+                <Button 
+                  size="lg" 
+                  className="text-lg px-8 py-6"
+                  onClick={() => window.open('/platform', '_blank')}
+                >
+                  <Rocket className="w-5 h-5 mr-2" />
+                  View Live Platform Demo
+                </Button>
+                <p className="text-sm text-muted-foreground">
+                  See the NexusVerse ecosystem in action
+                </p>
               </div>
             </Card>
           </motion.section>
