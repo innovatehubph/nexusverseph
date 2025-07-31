@@ -59,9 +59,9 @@ const Navigation = () => {
         <nav className="flex items-center justify-between h-full">
           <div className="flex items-center gap-2">
             <img 
-              src="/lovable-uploads/be45be9f-d1cf-4463-abf3-b66753527282.png" 
+              src="/lovable-uploads/8eaac305-4f63-49e0-ae2b-a7b4e8c04c7b.png" 
               alt="NexusVerse" 
-              className="w-8 h-8 brightness-0 invert mix-blend-screen"
+              className="w-8 h-8"
             />
             <span className="font-bold text-base">NexusVerse</span>
           </div>

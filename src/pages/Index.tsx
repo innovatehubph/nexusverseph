@@ -34,9 +34,9 @@ const Index = () => {
           className="flex items-center gap-4 mb-6"
         >
           <img 
-            src="/lovable-uploads/be45be9f-d1cf-4463-abf3-b66753527282.png" 
+            src="/lovable-uploads/8eaac305-4f63-49e0-ae2b-a7b4e8c04c7b.png" 
             alt="NexusVerse Logo" 
-            className="w-16 h-16 brightness-0 invert mix-blend-screen"
+            className="w-16 h-16"
           />
           <div className="inline-block px-4 py-1.5 rounded-full glass">
             <span className="text-sm font-medium">
