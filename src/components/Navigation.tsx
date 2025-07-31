@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Command, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
@@ -40,9 +40,11 @@ const Navigation = () => {
   };
 
   const navItems = [
+    { name: "Trading", href: "/trading", onClick: null },
+    { name: "Financial", href: "/financial", onClick: null },
+    { name: "Gaming", href: "/gaming", onClick: null },
     { name: "Features", href: "#features", onClick: () => scrollToSection('features') },
-    { name: "Prices", href: "#pricing", onClick: () => scrollToSection('pricing') },
-    { name: "Testimonials", href: "#testimonials", onClick: () => scrollToSection('testimonials') },
+    { name: "Pricing", href: "#pricing", onClick: () => scrollToSection('pricing') },
   ];
 
   return (
@@ -56,8 +58,12 @@ const Navigation = () => {
       <div className="mx-auto h-full px-6">
         <nav className="flex items-center justify-between h-full">
           <div className="flex items-center gap-2">
-            <Command className="w-5 h-5 text-primary" />
-            <span className="font-bold text-base">CryptoTrade</span>
+            <img 
+              src="/lovable-uploads/be45be9f-d1cf-4463-abf3-b66753527282.png" 
+              alt="NexusVerse" 
+              className="w-8 h-8"
+            />
+            <span className="font-bold text-base">NexusVerse</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -67,10 +73,13 @@ const Navigation = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => {
-                  e.preventDefault();
                   if (item.onClick) {
+                    e.preventDefault();
                     item.onClick();
+                  } else if (item.href.startsWith('#')) {
+                    e.preventDefault();
                   }
+                  // For regular navigation, let default behavior handle it
                 }}
                 className="text-sm text-muted-foreground hover:text-foreground transition-all duration-300"
               >
@@ -82,7 +91,7 @@ const Navigation = () => {
               size="sm"
               className="button-gradient"
             >
-              Start Trading
+              Join NexusVerse
             </Button>
           </div>
 
@@ -97,20 +106,22 @@ const Navigation = () => {
               <SheetContent className="bg-[#1B1B1B]">
                 <div className="flex flex-col gap-4 mt-8">
                   {navItems.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="text-lg text-muted-foreground hover:text-foreground transition-colors"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setIsMobileMenuOpen(false);
-                        if (item.onClick) {
-                          item.onClick();
-                        }
-                      }}
-                    >
-                      {item.name}
-                    </a>
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                        onClick={(e) => {
+                          setIsMobileMenuOpen(false);
+                          if (item.onClick) {
+                            e.preventDefault();
+                            item.onClick();
+                          } else if (item.href.startsWith('#')) {
+                            e.preventDefault();
+                          }
+                        }}
+                      >
+                        {item.name}
+                      </a>
                   ))}
                   <Button 
                     onClick={() => {
@@ -119,7 +130,7 @@ const Navigation = () => {
                     }}
                     className="button-gradient mt-4"
                   >
-                    Start Trading
+                    Join NexusVerse
                   </Button>
                 </div>
               </SheetContent>

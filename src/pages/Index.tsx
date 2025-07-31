@@ -33,7 +33,7 @@ const Index = () => {
           className="flex items-center gap-4 mb-6"
         >
           <img 
-            src="/lovable-uploads/e75bf810-c573-48d0-8123-d36a26bb86d1.png" 
+            src="/lovable-uploads/be45be9f-d1cf-4463-abf3-b66753527282.png" 
             alt="NexusVerse Logo" 
             className="w-16 h-16"
           />
