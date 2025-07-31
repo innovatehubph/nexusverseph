@@ -55,7 +55,7 @@ export const PricingSection = () => {
           className="text-5xl md:text-6xl font-normal mb-6"
         >
           Choose Your{" "}
-          <span className="text-gradient font-medium">Trading Plan</span>
+          <span className="text-gradient font-medium">NexusVerse Plan</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -63,45 +63,46 @@ export const PricingSection = () => {
           transition={{ delay: 0.1, duration: 0.5 }}
           className="text-lg text-gray-400"
         >
-          Select the perfect trading plan with advanced features and competitive fees
+          Select the perfect plan to access our complete Philippine financial ecosystem
         </motion.p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <PricingTier
-          name="Basic Trader"
-          price="$0"
-          description="Perfect for beginners starting their crypto journey"
+          name="NexusBasic"
+          price="₱0"
+          description="Perfect for starting your financial journey in the Philippines"
           features={[
-            "Basic spot trading",
-            "Market & limit orders",
-            "Basic market analysis",
-            "Email support"
+            "Basic PHPT & crypto trading",
+            "Nexuspay PHP gateway",
+            "Basic bill payments",
+            "Standard support"
           ]}
         />
         <PricingTier
-          name="Pro Trader"
-          price="$29"
-          description="Advanced features for serious traders"
+          name="NexusPro"
+          price="₱999"
+          description="Complete ecosystem access for active users"
           features={[
             "Advanced trading tools",
-            "Margin trading up to 10x",
-            "Advanced technical analysis",
+            "Full Platapay services",
+            "Gaming platform access",
+            "Remittance & loans",
             "Priority support",
             "API access"
           ]}
           isPopular
         />
         <PricingTier
-          name="Institutional"
+          name="NexusEnterprise"
           price="Custom"
-          description="Enterprise-grade solutions for institutions"
+          description="Enterprise solutions for businesses and institutions"
           features={[
-            "Custom trading solutions",
-            "Unlimited trading volume",
-            "OTC desk access",
+            "Custom integration solutions",
+            "Unlimited transaction volume",
             "Dedicated account manager",
-            "Custom API integration",
+            "BSP compliance support",
+            "Custom API development",
             "24/7 priority support"
           ]}
         />
