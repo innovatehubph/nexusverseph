@@ -61,7 +61,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/be45be9f-d1cf-4463-abf3-b66753527282.png" 
               alt="NexusVerse" 
-              className="w-8 h-8"
+              className="w-8 h-8 brightness-0 invert mix-blend-screen"
             />
             <span className="font-bold text-base">NexusVerse</span>
           </div>
