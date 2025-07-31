@@ -8,6 +8,7 @@ import LogoCarousel from "@/components/LogoCarousel";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import LogoProcessor from "@/components/LogoProcessor";
 
 const Index = () => {
   return (
@@ -108,6 +109,13 @@ const Index = () => {
       <div id="pricing" className="bg-black">
         <PricingSection />
       </div>
+
+      {/* Logo Processor Section - Temporary */}
+      <section className="container px-4 py-20">
+        <div className="max-w-2xl mx-auto">
+          <LogoProcessor />
+        </div>
+      </section>
 
       {/* Testimonials Section */}
       <div className="bg-black">
