@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Globe, Zap, Shield, Gamepad2, Coins, Users, Rocket, Star } from "lucide-react";
+import heroLogo from "@/assets/nexusverse-hero-logo.jpg";
 
 const Proposal = () => {
   const colorPalette = [
@@ -43,6 +44,23 @@ const Proposal = () => {
       
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-6xl">
+          {/* Hero Logo Section */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="mb-16"
+          >
+            <div className="relative overflow-hidden rounded-2xl">
+              <img 
+                src={heroLogo} 
+                alt="NexusVerse Brand Logo" 
+                className="w-full h-64 md:h-96 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent"></div>
+            </div>
+          </motion.div>
+
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
