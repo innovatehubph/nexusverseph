@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Trading from "./pages/Trading";
 import Financial from "./pages/Financial";
 import Gaming from "./pages/Gaming";
+import Proposal from "./pages/Proposal";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
             <Route path="/trading" element={<Trading />} />
             <Route path="/financial" element={<Financial />} />
             <Route path="/gaming" element={<Gaming />} />
+            <Route path="/proposal" element={<Proposal />} />
           </Routes>
         </BrowserRouter>
       </div>
